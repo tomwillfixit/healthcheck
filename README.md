@@ -1,18 +1,23 @@
-# Built-in Healthcheck using Docker 1.12
+# Dockerfile HEALTHCHECK instruction in Docker 1.12
 
 In docker 1.12 the HEALTHCHECK build instruction has been added to the Dockerfile which allows a healthcheck to be built into the image.  This is incredibly useful.
 
 Full details can be found here : https://github.com/docker/docker/pull/23218/commits/b6c7becbfe1d76b1250f6d8e991e645e13808a9c
 
-In the past when starting a container there may be a delay between the container starting and a service becoming available.  This is common with containers running webservers or databases.  The container has started, the service has started but it still isn't accessible.  We normally work around this with some bash in the container looping until the service is accessible. Or we use a script outside of the container which loops until it can access the container service.
+## Background
 
-Adding a HEALTHCHECK instruction to the Dockerfile has some clear benefits :
+When starting a container there may be a delay between the container starting and a service becoming available.  This is common with containers running webservers or databases.  The container has started, the service has started but it still isn't accessible.  We normally work around this with some bash in the container looping until the service is accessible. Or we use a script outside of the container which loops until it can access the container service.
 
-1. It allows to you define what "healthy" is 
+## Benefits
+
+Adding a HEALTHCHECK instruction to the Dockerfile has lots of benefits. Here are 4 :
+
+1. It allows to you define what "health" is
 2. A user can see the health requirement in the Dockerfile 
-3. If a container is not behaving as expected, exec in and manually run the healthcheck 
+3. If a container is not behaving as expected, exec in and manually run the healthcheck
+4. Health status is reported in docker ps
 
-## Example Dockerfile :
+## Example Dockerfile
 
 ```
 FROM alpine:3.3
