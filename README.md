@@ -77,3 +77,12 @@ docker inspect --format '{{ .State.Health.Status }}' ${container_id}
 
 ```
 
+## Check container health using docker ps
+```
+docker ps
+
+CONTAINER ID        IMAGE                    COMMAND             CREATED             STATUS                    PORTS                   NAMES
+3998c22d657a        helloworld:healthcheck   "/helloworld.bin"   34 minutes ago      Up 34 minutes (healthy)   0.0.0.0:32771->80/tcp   helloworld
+
+```
+
