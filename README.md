@@ -1,6 +1,6 @@
 ![healthcheck](img/healthcheck.png)
 
-# How healthy is your container? 
+# How healthy is the service running in your container?
 
 Docker 1.12 introduces the HEALTHCHECK build instruction to the Dockerfile which allows a healthcheck to be built into the image.  This is incredibly useful.
 
