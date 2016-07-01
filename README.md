@@ -1,6 +1,6 @@
-# Dockerfile HEALTHCHECK instruction in Docker 1.12
+# HEALTHCHECK instruction in Docker 1.12
 
-In docker 1.12 the HEALTHCHECK build instruction has been added to the Dockerfile which allows a healthcheck to be built into the image.  This is incredibly useful.
+Docker 1.12 introduces the HEALTHCHECK build instruction to the Dockerfile which allows a healthcheck to be built into the image.  This is incredibly useful.
 
 Full details can be found here : https://github.com/docker/docker/pull/23218/commits/b6c7becbfe1d76b1250f6d8e991e645e13808a9c
 
